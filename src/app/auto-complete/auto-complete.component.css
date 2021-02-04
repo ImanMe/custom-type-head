@@ -1,0 +1,26 @@
+li {
+  white-space: nowrap;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  /* color: #3f51b5 !important; */
+  color: grey !important;
+  font-size: smaller;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #3f51b5 !important;
+}
+
+.example-form-field {
+  width: 100%;
+}
+
+.no-of-dealers {
+  font-size: x-small;
+}

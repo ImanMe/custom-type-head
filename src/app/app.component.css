@@ -1,0 +1,9 @@
+::ng-deep.mat-menu-panel {
+  min-width: 280px !important;
+}
+
+
+::ng-deep.mat-menu-content {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
