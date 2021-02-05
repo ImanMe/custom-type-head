@@ -14,13 +14,15 @@ import { FormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { HeaderComponent } from './header/header.component';
 import { MatSelectModule } from '@angular/material/select';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AutoCompleteComponent,
-    HeaderComponent
+    HeaderComponent,
+    SideMenuComponent
   ],
   imports: [
     BrowserModule,

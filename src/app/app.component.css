@@ -1,9 +1,49 @@
-::ng-deep.mat-menu-panel {
+/* ::ng-deep.mat-menu-panel {
   min-width: 280px !important;
-}
-
+} */
 
 ::ng-deep.mat-menu-content {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+.sidenav-custom{
+ overflow: hidden;
+  transition: 0.5s;
+  z-index: 1;
+  top: 0;
+  width: 0;
+  min-width: 0px !important;
+}
+
+.menu-width{
+  width: 280px !important;
+  min-width: 280px !important;
+}
+
+.no-menu-width{
+  width: 0px !important;
+  min-width: 0px !important;
+  transition: 0.5s;
+}
+
+.box {
+  max-width: 0px;
+  transition: ease-in-out 400ms max-width;
+}
+
+.box.opened {
+  max-width: 500px;
+  transition: ease-in-out 600ms max-width;
+}
+
+
+.hidden-side-nav {
+  width: 0;
+  transition: 0.5s;
+}
+
+ul>li{
+  white-space: nowrap;
+  background-color: transparent;
 }
