@@ -1,0 +1,15 @@
+.custom-center {
+    margin: 0 auto;
+    width: 80%;
+  }
+  @media only screen and (max-width: 600px){
+    .formHeader, .formHeader>div{
+        display:block !important
+    }
+  }
+  
+  
+  /* mat-form-field.mat-form-field {
+      display: inline !important;
+    } */
+  

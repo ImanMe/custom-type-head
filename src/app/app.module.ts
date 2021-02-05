@@ -12,13 +12,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
-
+import { HeaderComponent } from './header/header.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AutoCompleteComponent
+    AutoCompleteComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatButtonModule,
     MatInputModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

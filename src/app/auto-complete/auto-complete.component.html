@@ -1,42 +1,42 @@
-
-    <div class="row" (click)="$event.stopPropagation();">
-        <div class="container-fluid">
-            <mat-form-field appearance="standard" class="example-form-field mb-0">
-                <mat-label>Search for Dealer</mat-label>
-                <input matInput type="text" [(ngModel)]="value" (keyup)="searchDealers()">
-                <mat-icon color="primary" matSuffix>search</mat-icon>
-                <!-- <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<div class="row" (click)="$event.stopPropagation();">
+    <div class="container-fluid">
+        <mat-form-field appearance="standard" class="example-form-field mb-0">
+            <mat-label>Search for Dealer</mat-label>
+            <input matInput type="text" [(ngModel)]="value" (keyup)="searchDealers()">
+            <mat-icon color="primary" matSuffix>search</mat-icon>
+            <!-- <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                     <mat-icon>close</mat-icon>
                 </button> -->
-            </mat-form-field>           
-        </div>
+        </mat-form-field>
     </div>
-    <div class="row pb-3">
-        <div class="col-12">
-            <ul class="list-group">
-                <li *ngFor="let dealer of dealersPerPage" class="">
-                    <a style="cursor: pointer;" (click)="onDealerSelect(dealer)">{{dealer.name}}({{dealer.id}})</a>
-                </li>
-            </ul>
-        </div>
+</div>
+<div class="row pb-3">
+    <div class="col-12">
+        <ul class="list-group">
+            <li *ngFor="let dealer of currentPageDealers" class="">
+                <a style="cursor: pointer;" (click)="onDealerSelect(dealer)">{{dealer.name}}({{dealer.id}})</a>
+            </li>
+        </ul>
     </div>
-    <!-- <mat-divider color="primary"></mat-divider> -->    
-    <div class="row pb-3" (click)="$event.stopPropagation();">
-        <div class="container-fluid">
-            <span class="no-of-dealers mt-0">{{totalResultCount}} dealers found.</span>
-            <div class="d-flex justify-content-between align-items-center small">
-                <div class="flex-fill">
-                    <button [disabled]="pageNumber <=1" mat-raised-button color="primary" (click)="prev()">Prev</button>
-                </div>
-                <div class="flex-fill">
-                    <div class="">
-                        <span class="no-of-dealers">Page {{pageNumber}} of {{totalNumberOfPages}}</span><br>
-                        <!-- <span class="no-of-dealers">{{totalresultCount}} dealers found.</span> -->
-                    </div>
-                </div>
+</div>
+<!-- <mat-divider color="primary"></mat-divider> -->
+<div class="row pb-3" (click)="$event.stopPropagation();">
+    <div class="container-fluid">
+        <span class="no-of-dealers mt-0">{{totalResultCount}} dealers found.</span>
+        <div class="d-flex justify-content-between align-items-center small">
+            <div class="flex-fill">
+                <button [disabled]="pageNumber <=1" mat-raised-button color="primary" (click)="prev()">Prev</button>
+            </div>
+            <div class="flex-fill">
                 <div class="">
-                    <button mat-raised-button color="primary" (click)="next()">Next</button>
+                    <span class="no-of-dealers">Page {{pageNumber}} of {{totalNumberOfPages}}</span><br>
+                    <!-- <span class="no-of-dealers">{{totalresultCount}} dealers found.</span> -->
                 </div>
+            </div>
+            <div class="">
+                <button mat-raised-button color="primary" [disabled]="pageNumber >= totalNumberOfPages"
+                    (click)="next()">Next</button>
             </div>
         </div>
     </div>
+</div>
